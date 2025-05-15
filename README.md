@@ -22,9 +22,9 @@ El usuario puede definir:
    git clone https://github.com/tu_usuario/nombre_del_repositorio.git
    cd nombre_del_repositorio
 ## Codigo:
-import java.util.Scanner;
-
-public class MetodoSecante {
+    import java.util.Scanner;
+ 
+    public class MetodoSecante {
 
     // Definimos la función f(x) cuya raíz se busca
     public static double f(double x) {
@@ -49,4 +49,14 @@ public class MetodoSecante {
 
         System.out.print("Ingrese el número máximo de iteraciones: ");
         int maxIteraciones = scanner.nextInt();
+    // Variables para el método
+        double x2;
+        int iteracion = 0;
+
+        System.out.println("\nIteración\t x0\t\t x1\t\t x2\t\t f(x2)");
+
+        // Bucle principal del método de la secante
+        while (iteracion < maxIteraciones) {
+            double f0 = f(x0);
+            double f1 = f(x1);
 
