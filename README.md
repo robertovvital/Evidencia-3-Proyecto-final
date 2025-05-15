@@ -70,3 +70,22 @@ El usuario puede definir:
             x2 = x1 - f1 * (x1 - x0) / (f1 - f0);
 
             System.out.printf("%d\t\t %.6f\t %.6f\t %.6f\t %.6f\n", iteracion + 1, x0, x1, x2, f(x2));
+    // Verificar si la solución es suficientemente precisa
+            if (Math.abs(x2 - x1) < tolerancia) {
+                System.out.println("\nLa raíz aproximada es: " + x2);
+                break;
+            }
+
+            // Preparar la siguiente iteración
+            x0 = x1;
+            x1 = x2;
+            iteracion++;
+        }
+
+        if (iteracion == maxIteraciones) {
+            System.out.println("\nNo se alcanzó la convergencia en el número máximo de iteraciones.");
+        }
+
+        scanner.close();
+    }
+    }
