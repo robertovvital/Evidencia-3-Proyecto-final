@@ -60,3 +60,13 @@ El usuario puede definir:
             double f0 = f(x0);
             double f1 = f(x1);
 
+    // Evitar división por cero
+            if (f1 - f0 == 0) {
+                System.out.println("Error: División por cero en la iteración " + iteracion);
+                break;
+            }
+
+    // Fórmula del método de la secante
+            x2 = x1 - f1 * (x1 - x0) / (f1 - f0);
+
+            System.out.printf("%d\t\t %.6f\t %.6f\t %.6f\t %.6f\n", iteracion + 1, x0, x1, x2, f(x2));
