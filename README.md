@@ -35,4 +35,18 @@ public class MetodoSecante {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-       
+        // Solicitar datos de entrada
+        System.out.println("Método de la Secante para encontrar raíces de una función");
+
+        System.out.print("Ingrese el primer valor inicial (x0): ");
+        double x0 = scanner.nextDouble();
+
+        System.out.print("Ingrese el segundo valor inicial (x1): ");
+        double x1 = scanner.nextDouble();
+
+        System.out.print("Ingrese la tolerancia (por ejemplo, 1e-6): ");
+        double tolerancia = scanner.nextDouble();
+
+        System.out.print("Ingrese el número máximo de iteraciones: ");
+        int maxIteraciones = scanner.nextInt();
+
